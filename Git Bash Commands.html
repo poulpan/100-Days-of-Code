@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    
+    <style>
+        body {
+            background-color: darkslategrey;
+            color: whitesmoke;
+            font-size: 180%;
+        }
+        h3 {
+            color: white;
+            text-align: center;
+        }
+        span {
+            color: lightskyblue;
+        }
+        em {
+            color: yellowgreen;
+            font-size: 90%;
+        }
+        th {
+            text-align: left;
+        }
+        ul {
+            list-style-type: none;
+        }
+    </style>
+    
+    <body>
+        <h3>Git Bash Commands</h3>
+        <table>
+            <tr>
+                <th>
+                    <ul >
+                        <li><em>Add your name & email to Git</em></li>
+                        <li>git config --global user.name '<span>name</span>'</li>
+                        <li>git config --global user.email '<span>email</span>'</li>
+                        <li><em>Adds everything (every file):</em></li>
+                        <li>git add .</li>
+                        <li><em>Add a specific file:</em></li>
+                        <li>git add <span>file.extension</span></li>
+                        <li><em>Remove a specific file:</em></li>
+                        <li>git rm --cached <span>file.extension</span></li>
+                        <li><em>Add all files of that extension:</em></li>
+                        <li>git add *.<span>extension</span></li>            
+                        <li><em>Shows you the status (obviously!):</em></li>
+                        <li>git status</li>
+                        <li><em>Opens editor (for me notepad++) to, comment changes before committing them:</em></li>
+                        <li>git commit</li>
+                        <li><em>How to comment changes before committing them, without opening the editor:</em></li>
+                        <li>git commit -m '<span>comment</span>'</li>
+                    </ul>
+                </th>
+                <th>
+                    <ul>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                    </ul>
+                </th>
+                <th>
+                    <ul>
+                        <li><em>Create a new file:</em></li>
+                        <li>touch <span>file.extension</span></li>
+                        <li><em>Create a file so that Git ignores in it's status, whatever other file or folder 
+                            you put in it:</em></li>
+                        <li><em>(Notes for .gitignore: ignore a file <span>file.extension</span>, ignore all files 
+                            of that extension <span>*.extension</span>, ignore folder <span>/dir...</span>)</em></li>
+                        <li>touch .gitignore</li>
+                    </ul>
+                </th>
+            </tr>
+        </table>
+
+    </body>
+
+</html>
