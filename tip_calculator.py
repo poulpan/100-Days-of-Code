@@ -27,9 +27,16 @@ while True:
     try:
         persons = int(input("How many people to split the bill? "))
     except ValueError:
-        print("Not a valid input - Only numbers allowed")
+        print("Not a valid input - Only whole numbers allowed")
         continue
     break
-print("\nSo you have to pay $" + str(total_bill) + " plus " + str(tip_percentage) + "% tip and split the bill between " + str(persons) + " people!")
-bill = round((((total_bill*tip_percentage)/100)+total_bill)/persons, 2)
-print("Each person should pay: $"+str(bill)+"\n")
+# print("\nSo you have to pay $" + str(total_bill) + " plus " + str(tip_percentage) + "% tip and split the bill between " + 
+# str(persons) + " people!")
+# bill = round((((total_bill*tip_percentage)/100)+total_bill)/persons, 2)
+# print("Each person should pay: $"+str(bill)+"\n")
+
+# Better way of doing the above prints, is with the 'f-String'
+# Also use a format so we always get 2 decimals after float even if the second one is zero!
+print(f"\nSo you have to pay ${total_bill} plus {tip_percentage}% tip and split the bill between {persons} people!")
+bill = "{:.2f}".format((((total_bill*tip_percentage)/100)+total_bill)/persons)
+print(f"Each person should pay: ${bill}\n")

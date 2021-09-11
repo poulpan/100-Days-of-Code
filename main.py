@@ -1,4 +1,5 @@
 # ***NOTE*** ctrl + / adds a # at the start of the line
+# ***NOTE*** 8 // 3: this // is called "floor division" 
 
 #print("Day 1 - Python Print Function")
 #print("The function is declared like this:")
