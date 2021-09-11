@@ -49,8 +49,11 @@
 # BMI = weight/height**2
 # print("Your BMI equals ", int(round(BMI,0)))
 
-for i in range (0,10):
-    a = 19+i/10
-    print(a)
-    print(int(round(a,0)))
+# for i in range (0,10):
+    # a = 19+i/10
+    # print(a," ",type(a))
+    # print(round(a)," ",type(round(a)))
+   
+# print(a:=round(10/3,2)," ",type(a))
+# print(b:=10//3," ",type(b))
 
