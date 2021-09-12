@@ -81,25 +81,26 @@
 
 # year = int(input("Which year do you want to check? "))
 
-f = open("output.txt", "w")
-for year in range (1000,3001):
-    print("year= ",year, file=f)
-    if year % 400 == 0:
-        print("Leap year.", file=f)
-    elif year % 4 == 0:
-        if year % 100 != 0:
-            print("Leap year.", file=f)
-        else:
-            print("NOT leap year.", file=f)
-    else:
-            print("NOT leap year.", file=f)
-# Other way:
-    if year % 4 != 0:
-        print("NOT leap year.", file=f)
-    elif year % 100 != 0:
-        print("Leap year.", file=f)
-    elif year % 400 != 0:
-        print("NOT leap year.", file=f)
-    else:
-        print("Leap year.", file=f)
-f.close()
+# f = open("output.txt", "w")
+# for year in range (1000,3001):
+    # print("year= ",year, file=f)
+    # if year % 400 == 0:
+        # print("Leap year.", file=f)
+    # elif year % 4 == 0:
+        # if year % 100 != 0:
+            # print("Leap year.", file=f)
+        # else:
+            # print("NOT leap year.", file=f)
+    # else:
+            # print("NOT leap year.", file=f)
+# ***NOTE*** Other way:
+    # if year % 4 != 0:
+        # print("NOT leap year.", file=f)
+    # elif year % 100 != 0:
+        # print("Leap year.", file=f)
+    # elif year % 400 != 0:
+        # print("NOT leap year.", file=f)
+    # else:
+        # print("Leap year.", file=f)
+# f.close()
+
