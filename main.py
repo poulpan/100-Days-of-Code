@@ -47,8 +47,18 @@
 
 # weight = float(input("What is your weight? "))
 # height = float(input("What is your height? "))
-# BMI = weight/height**2
-# print("Your BMI equals ", int(round(BMI,0)))
+# BMI = round(weight/height**2, 1)
+# print("Your BMI equals ", BMI, "\n")
+# if BMI < 18.5:
+    # print(f"According to your BMI={BMI} you are underweight.")
+# elif BMI < 25:
+    # print(f"According to your BMI={BMI} you have a normal weight.")
+# elif BMI < 30:
+    # print(f"According to your BMI={BMI} you are overweight.")
+# elif BMI < 35:
+    # print(f"According to your BMI={BMI} you are obese.")
+# else:
+    # print(f"According to your BMI={BMI} you are clinically obese.")
 
 # for i in range (0,10):
     # a = 19+i/10
@@ -58,3 +68,38 @@
 # print(a:=round(10/3,2)," ",type(a))
 # print(b:=10//3," ",type(b))
 
+# n = int(input("Give me a whole number plz: "))
+# list1 = []
+# list2 = []
+# for i in range(1, n+1):
+    # if i%2 == 0:
+        # list1.append(i)
+    # else:
+        # list2.append(i)
+# print("The even numbers are:\n", list1, "\n")
+# print("The odd number are:\n", list2, "\n")
+
+# year = int(input("Which year do you want to check? "))
+
+f = open("output.txt", "w")
+for year in range (1000,3001):
+    print("year= ",year, file=f)
+    if year % 400 == 0:
+        print("Leap year.", file=f)
+    elif year % 4 == 0:
+        if year % 100 != 0:
+            print("Leap year.", file=f)
+        else:
+            print("NOT leap year.", file=f)
+    else:
+            print("NOT leap year.", file=f)
+# Other way:
+    if year % 4 != 0:
+        print("NOT leap year.", file=f)
+    elif year % 100 != 0:
+        print("Leap year.", file=f)
+    elif year % 400 != 0:
+        print("NOT leap year.", file=f)
+    else:
+        print("Leap year.", file=f)
+f.close()
