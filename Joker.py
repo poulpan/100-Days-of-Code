@@ -1,3 +1,7 @@
+# Prints five random numbers between 1 to 45, making sure they are unique by testing and
+# retesting for their single occurrence in the list and one random number (the joker)
+# between 1 to 20.
+
 import random
 
 list = []
@@ -36,6 +40,9 @@ while j < 5:
     else:
         print(j,"move ON")
         j += 1
+
+# The above print() are for seeing the code progress and testing and can be removed.
+# Only the below print() are needed for the result.
 
 print("sorted", sorted(list))
 print(f" joker [{random.randint(1,20)}]\n")
