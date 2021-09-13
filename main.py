@@ -80,7 +80,6 @@
 # print("The odd number are:\n", list2, "\n")
 
 # year = int(input("Which year do you want to check? "))
-
 # f = open("output.txt", "w")
 # for year in range (1000,3001):
     # print("year= ",year, file=f)
