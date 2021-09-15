@@ -103,3 +103,36 @@
         # print("Leap year.", file=f)
 # f.close()
 
+
+# import random 
+# random_int = random.randint(0,4)
+# random_flo = random.random()
+# print(random_int,"\n")
+# print(random_flo,"\n")
+# print("{:.2f}".format(random_int+random_flo))
+
+# import random
+# coin = random.randint(1,2)
+# if coin == 1:
+    # print("Heads")
+# else:
+    # print("Tails")
+
+# list = ["a","b","c","d","e","f","g"]
+# print(list)
+# print(list.pop(1))
+# print(list)
+# print(list.index("d"))
+# list.reverse()
+# print(list)
+# list.extend(["h","i"])
+# print(list)
+
+# import random
+# names_string = input("Give me your names seperated by a comma: ")
+# names = names_string.split(",")
+# lucky_name = random.randint(0,len(names)-1)
+# print(f"And the winned of ppaying the bill is {names[lucky_name]}")
+# ***NOTE***or ever better:
+# print(f"And the winned of ppaying the bill is {random.choice(names)}")
+
