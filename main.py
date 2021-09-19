@@ -136,3 +136,36 @@
 # ***NOTE***or ever better:
 # print(f"And the winned of ppaying the bill is {random.choice(names)}")
 
+
+# 🚨 Don't change the code below 👇
+# student_heights = input("Input a list of student heights ").split()
+# for n in range(0, len(student_heights)):
+#   student_heights[n] = int(student_heights[n])
+# 🚨 Don't change the code above 👆
+# Write your code below this row 👇
+# i = 0
+# total_height = 0
+# for height in student_heights:
+    # total_height += height
+    # i += 1
+# print("Roung of ", total_height, "/", i, "=", round(total_height/i))
+
+
+# student_scores = [78, 65, 89, 86, 55, 91, 64, 89]
+# i = 0
+# for score in student_scores:
+    # if score > i:
+    #    print(f"{score} is greater than {i} and I have a new high")
+    #    i = score
+    # else:
+        # print(f"{score} is lower than {i} and I do nothing")
+# print(f"the highest of them all is {i}\n")
+
+
+# total = 0
+# for number in range(0, 101, 2):
+    # total += number
+# print(total)
+
+
+
