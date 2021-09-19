@@ -5,7 +5,8 @@
 import random
 
 list = []
-for i in range (0,5):
+n = int(input("How many random numbers? "))
+for i in range (0,n):
     list.append(random.randint(1,45))
     # ***NOTE*** 1st try
     # print(list)
@@ -31,7 +32,7 @@ print(list,"first")
         # j += 1
     # break
 j = 0
-while j < 5:
+while j < n:
     if list.count(list[j]) != 1:
         print("***NOT OK***")
         list[j] = random.randint(1,45)
