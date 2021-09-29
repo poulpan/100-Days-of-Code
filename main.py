@@ -161,7 +161,6 @@
         # print(f"{score} is lower than {i} and I do nothing")
 # print(f"the highest of them all is {i}\n")
 
-
 # total = 0
 # for number in range(0, 101, 2):
     # total += number
