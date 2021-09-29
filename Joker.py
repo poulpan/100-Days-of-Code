@@ -61,22 +61,22 @@ import random
 # END OF FUCTION
 
 def Joker_Lottery(num, total):
-    my_list = []
+    number_list = []
     for i in range (0, num):
-        my_list.append(random.randint(1, total))
+        number_list.append(random.randint(1, total))
         i += 1
     j = 0
     while j < num:
-        if my_list.count(my_list[j]) != 1:
-            my_list[j] = random.randint(1, total)
+        if number_list.count(number_list[j]) != 1:
+            number_list[j] = random.randint(1, total)
             j = 0
         else:
             j += 1
-    your_numbers = []
-    for list_a in range(1, total+1):
-        if my_list.count(list_a) == 0:
-            your_numbers.append(list_a)
-    print(f"** Good Luck **  {your_numbers}")
+    your_result = []
+    for a in range (1, total+1):
+        if number_list.count(a) == 0:
+            your_result.append(a)
+    print(f"** Good Luck **  {your_result}")
 
 
 # system = int(input("Type 0 for no system, else the system number: "))
