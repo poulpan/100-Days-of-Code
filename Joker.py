@@ -78,7 +78,6 @@ def Joker_Lottery(num, total):
             your_result.append(a)
     print(f"** Good Luck **  {your_result}")
 
-
 # system = int(input("Type 0 for no system, else the system number: "))
 # if system == 0:
     # n = 40
@@ -95,27 +94,81 @@ def Joker_Lottery(num, total):
 # else:
     # print("This system not yet available!")
 
+joker_systems = str("""
+No System:   5-Numbers,   1-Columns | Cost:  0.50€, Chance:   ??% 
+System 12:  15-Numbers, 118-Columns | Cost: 59.00€, Chance: 3.93%
+System 13:  13-Numbers,  54-Columns | Cost: 27.00€, Chance:  4.2%
+System 14:  12-Numbers,  38-Columns | Cost: 19.00€, Chance:  4.8%
+System 15:  11-Numbers,  22-Columns | Cost: 11.00€, Chance: 4.76%
+System 23:  10-Numbers,  51-Columns | Cost: 25.50€, Chance: 20.24%
+System 24:  10-Numbers,  14-Columns | Cost:  7.00€, Chance: 5.55%
+System 25:   9-Numbers,  30-Columns | Cost: 15.00€, Chance: 23.8%
+System 34:   9-Numbers,   9-Columns | Cost:  4.50€, Chance:  7.1%
+System 35:   8-Numbers,   6-Columns | Cost:  3.00€, Chance: 10.7%
+System 45:   7-Numbers,   5-Columns | Cost:  2.50€, Chance: 23.8%""")
+
 while True:
     try:
-        system = int(input("Type 0 for no system, else the system #: "))
-        if system < 0:
-            print("-> Not a valid input <-\n")
-            system = int(input("Type 0 for no system, else the system #: "))
+        system = str(input(joker_systems + "\n\nType 00 for No System, else the System #: "))
+        print("\n")
+        while True:
+            if (system == f'{00:02d}' or system == f'{12:02d}' or system == f'{13:02d}' or system == f'{14:02d}' or system == f'{15:02d}' or system == f'{23:02d}' or system == f'{24:02d}' or system == f'{25:02d}' or system == f'{34:02d}' or system == f'{35:02d}' or system == f'{45:02d}'):
+                break
+            else:
+                print("-> Not a valid input <-")
+                system = str(input(joker_systems + "\n\nType 00 for No System, else the System #: "))
+                print("\n")
+                continue
     except ValueError:
-        print("-> Not a valid input <-\n")
+        print("-> Not a valid input <-")
         continue
     break
-if system == 0:
+if system == f'{00:02d}':
     # n = 40
     # m = 19
     # Joker_Lottery(n, m)
     Joker_Lottery(40, 45)
     Joker_Lottery(19, 20)
-elif system == 45:
-    # n = 38
-    # m = 19
-    # Joker_Lottery(n, m)
+    print("\n")
+elif system == f'{12:02d}':
+    Joker_Lottery(30, 45)
+    Joker_Lottery(19, 20)
+    print("\n")
+elif system == f'{13:02d}':
+    Joker_Lottery(32, 45)
+    Joker_Lottery(19, 20)
+    print("\n")
+elif system == f'{14:02d}':
+    Joker_Lottery(33, 45)
+    Joker_Lottery(19, 20)
+    print("\n")
+elif system == f'{15:02d}':
+    Joker_Lottery(34, 45)
+    Joker_Lottery(19, 20)
+    print("\n")
+elif system == f'{23:02d}':
+    Joker_Lottery(35, 45)
+    Joker_Lottery(19, 20)
+    print("\n")
+elif system == f'{24:02d}':
+    Joker_Lottery(35, 45)
+    Joker_Lottery(19, 20)
+    print("\n")
+elif system == f'{25:02d}':
+    Joker_Lottery(36, 45)
+    Joker_Lottery(19, 20)
+    print("\n")
+elif system == f'{34:02d}':
+    Joker_Lottery(36, 45)
+    Joker_Lottery(19, 20)
+    print("\n")
+elif system == f'{35:02d}':
+    Joker_Lottery(37, 45)
+    Joker_Lottery(19, 20)
+    print("\n")
+elif system == f'{45:02d}':
     Joker_Lottery(38, 45)
     Joker_Lottery(19, 20)
+    print("\n")
 else:
     print("Sorry, this system is not yet available!\n")
