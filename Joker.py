@@ -137,46 +137,68 @@ if system == f'{00:02d}':
     # n = 40
     # m = 19
     # Joker_Lottery(n, m)
+    print(f'S-{system}', file=f)
+    print(f'S-{system}')
     Joker_Lottery(40, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{12:02d}':
+    print(f'S-{system}', file=f)
+    print(f'S-{system}')
     Joker_Lottery(30, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{13:02d}':
+    print(f'S-{system}', file=f)
+    print(f'S-{system}')
     Joker_Lottery(32, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{14:02d}':
+    print(f'S-{system}', file=f)
+    print(f'S-{system}')
     Joker_Lottery(33, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{15:02d}':
+    print(f'S-{system}', file=f)
+    print(f'S-{system}')
     Joker_Lottery(34, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{23:02d}':
+    print(f'S-{system}', file=f)
+    print(f'S-{system}')
     Joker_Lottery(35, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{24:02d}':
+    print(f'S-{system}', file=f)
+    print(f'S-{system}')
     Joker_Lottery(35, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{25:02d}':
+    print(f'S-{system}', file=f)
+    print(f'S-{system}')
     Joker_Lottery(36, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{34:02d}':
+    print(f'S-{system}', file=f)
+    print(f'S-{system}')
     Joker_Lottery(36, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{35:02d}':
+    print(f'S-{system}', file=f)
+    print(f'S-{system}')
     Joker_Lottery(37, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{45:02d}':
+    print(f'S-{system}', file=f)
+    print(f'S-{system}')
     Joker_Lottery(38, 45)
     Joker_Lottery(19, 20)
     print("\n")
