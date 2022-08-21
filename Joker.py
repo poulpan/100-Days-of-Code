@@ -2,12 +2,14 @@
 # retesting for their single occurrence in the list and one random number (the joker)
 # between 1 to 20.
 # 2) Modified with the same code to choose between 1 to 20.
-# 3) Redifined its complexity to find numbers and bring me the remaining
+# 3) Redifined its complexity to find numbers and bring me the remaining (My current logic is that if i.e. you need to find 5 numbers out of 45,
+# the code creates a list of 40 numbers and then outputs the remaining 5 that are missing from that list!)
 # 4) I started creating conditions with different player systems, for more numerical results.The code was getting too big,
 # so I tried to make it more elegant by using functions. On the first try the code was still big,
 # so I changed the mode according to the players' systems.
 
 import random
+from datetime import datetime
 
 # def Joker_Lottery(n, m):
     # *** code starts here ***
@@ -60,13 +62,20 @@ import random
 
 # END OF FUCTION
 
+f= open("joker_2.txt", "a")
+now = datetime.now()
+dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+print(f"*** DATE:\t{dt_string} ***\n", file=f)
+
 def Joker_Lottery(num, total):
     number_list = []
     for i in range (0, num):
         number_list.append(random.randint(1, total))
         i += 1
+    print(f"FIRST_LIST: {number_list}\n", file=f)
     j = 0
     while j < num:
+        print(f"{j}-try: {number_list}\n", file=f)
         if number_list.count(number_list[j]) != 1:
             number_list[j] = random.randint(1, total)
             j = 0
@@ -76,6 +85,7 @@ def Joker_Lottery(num, total):
     for a in range (1, total+1):
         if number_list.count(a) == 0:
             your_result.append(a)
+    print(f"** Good Luck **  {your_result}\n", file=f)
     print(f"** Good Luck **  {your_result}")
 
 # system = int(input("Type 0 for no system, else the system number: "))
@@ -172,3 +182,5 @@ elif system == f'{45:02d}':
     print("\n")
 else:
     print("Sorry, this system is not yet available!\n")
+
+f.close()

@@ -25,7 +25,7 @@ elif (x%3 == 1):
         c = random.choice(string.punctuation)
         list1.append(c)
 elif (x%3 == 2):
-    for i in range(0, x//3+1):
+    for i in range(0, x//3 + 1):
         a = random.randint(0,9)
         list1.append(str(a))
     for j in range(0, x//3 + 1):
