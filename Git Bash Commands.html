@@ -5,7 +5,7 @@
         body {
             background-color: darkslategrey;
             color: whitesmoke;
-            font-size: 175%;
+            font-size: 148%;
         }
         h3,p {
             color: white;
@@ -65,56 +65,76 @@
                         <li>git commit -m '<span>comment</span>'</li>
                         <li><em>Create a new file:</em></li>
                         <li>touch <span>file.extension</span></li>
-                    </ul>
-                </th>
-                <th>
-                    <ul>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                    </ul>
-                </th>
-                <th>
-                    <ul>
                         <li><em>Create a file so that Git ignores in it's status, whatever other file or folder you put in it:
                             <br />(ignore a file <span>file.extension</span>, ignore all files of that extension 
                             <span>*.extension</span>, ignore folder <span>/dir...</span>)
                         </em></li>
                         <li>touch .gitignore</li>
-                        <li><em>Change branch so you can work and commit changes, without "saving" them to the master branch:
+                    </ul>
+                </th>
+                <th>
+                    <ul>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                    </ul>
+                </th>
+                <th>
+                    <ul>
+                        <li><em>Create a new branch so you can work and commit changes, without "saving" them to the master branch:
                             <br />(usefull when working with a team)
                         </em></li>
                         <li>git branch <span>name_of_the_branch</span></li>
                         <li><em>Switch between branches:</em></li>
                         <li>git checkout <span>name_of_the_branch</span></li>
+                        <li><em>Create a new branch and immediately Switch to it:</em></li>
+                        <li>git checkout -b <span>name_of_the_branch</span></li>
                         <li><em>Merge another branch to master:
-                            <br />(entering the command while we are at master branch)
+                            <br />(entering the command while we are at master branch - to be sure you can 'git checkout <span>master</span>')
                         </em></li>
                         <li>git merge <span>name_of_the_branch</span></li>
-                        <li><em>After creating a repository in GitHub and following the instructions for 
+                        <li><em>Merge master branch to another branch we are currently working on:
+                            <br />(entering the command while we are at our other branch that we are currently working on - 
+                            to be sure you can 'git checkout <span>name_of_the_branch</span>')
+                        </em></li>
+                        <li>git merge <span>master</span></li>
+                        <li><em>After creating a remote repository in GitHub and following the instructions for 
                             <span>git remote and origin ...</span> and<br /><span>git push -u origin master</span>, 
                             now every time I want to push new changes to GitHub:
                         </em></li>
                         <li>git push</li>
+                        <li><em>If you want to pull the changes of a specific branch from a remote repository in GitHub:
+                            <br />(Caution!! 'pull' does fetch & merge changes on your local repository. It replaces your
+                            <br /> local repository with what's in the remote repository, i.e.: If you use 'git pull origin 
+                            <span>master</span>' it will replace your local master in your local repository. <br />There are also
+                            cases that you might get a merge conflict that you'll need to manually resolve. Check google for more
+                            details.)
+                        </em></li>
+                        <li>git pull origin <span>name_of_the_branch</span></li>
                     </ul>
                 </th>
             </tr>
