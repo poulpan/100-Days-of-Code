@@ -87,11 +87,11 @@ from datetime import datetime
 from collections import Counter
 
 f1= open("joker_file_1.txt", "a")
-f2= open("joker_file_2.txt", "w")
+# f2= open("joker_file_2.txt", "w")
 now = datetime.now()
 dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 print(f"*** DATE:\t{dt_string} ***\n", file=f1)
-print(f"*** DATE:\t{dt_string} ***\n", file=f2)
+# print(f"*** DATE:\t{dt_string} ***\n", file=f2)
 
 joker_systems = str("""
 No System:   5-Numbers,   1-Columns | Cost:  0.50€, Chance:   ??% 
@@ -148,14 +148,14 @@ def Joker_Lottery(num, total):
             number_list.append(random.randint(1, total))
             i += 1
 
-        if number_to_run <= 5000:
-            print(f"FIRST_LIST: {number_list}", file=f2)
+        # if number_to_run <= 5000:
+            # print(f"FIRST_LIST: {number_list}", file=f2)
 
         j = 0
         while j < num:
 
-            if number_to_run <= 5000:
-                print(f"{j}-try: {number_list}", file=f2)
+            # if number_to_run <= 5000:
+                # print(f"{j}-try: {number_list}", file=f2)
 
             if number_list.count(number_list[j]) != 1:
                 number_list[j] = random.randint(1, total)
@@ -166,7 +166,7 @@ def Joker_Lottery(num, total):
         for a in range (1, total+1):
             if number_list.count(a) == 0:
                 your_result.append(a)
-        print(f"** Good Luck **  {your_result}\n", file=f2)
+        # print(f"** Good Luck **  {your_result}\n", file=f2)
         temp_list.append(your_result)
         t += 1
 
@@ -193,77 +193,77 @@ def Joker_Lottery(num, total):
 
 if system == f'{00:02d}':
     print(f'S-{system}\n', file=f1)
-    print(f'S-{system}', file=f2)
+    # print(f'S-{system}', file=f2)
     print(f'S-{system}')
     Joker_Lottery(40, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{12:02d}':
     print(f'S-{system}\n', file=f1)
-    print(f'S-{system}', file=f2)
+    # print(f'S-{system}', file=f2)
     print(f'S-{system}')
     Joker_Lottery(30, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{13:02d}':
     print(f'S-{system}\n', file=f1)
-    print(f'S-{system}', file=f2)
+    # print(f'S-{system}', file=f2)
     print(f'S-{system}')
     Joker_Lottery(32, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{14:02d}':
     print(f'S-{system}\n', file=f1)
-    print(f'S-{system}', file=f2)
+    # print(f'S-{system}', file=f2)
     print(f'S-{system}')
     Joker_Lottery(33, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{15:02d}':
     print(f'S-{system}\n', file=f1)
-    print(f'S-{system}', file=f2)
+    # print(f'S-{system}', file=f2)
     print(f'S-{system}')
     Joker_Lottery(34, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{23:02d}':
     print(f'S-{system}\n', file=f1)
-    print(f'S-{system}', file=f2)
+    # print(f'S-{system}', file=f2)
     print(f'S-{system}')
     Joker_Lottery(35, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{24:02d}':
     print(f'S-{system}\n', file=f1)
-    print(f'S-{system}', file=f2)
+    # print(f'S-{system}', file=f2)
     print(f'S-{system}')
     Joker_Lottery(35, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{25:02d}':
     print(f'S-{system}\n', file=f1)
-    print(f'S-{system}', file=f2)
+    # print(f'S-{system}', file=f2)
     print(f'S-{system}')
     Joker_Lottery(36, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{34:02d}':
     print(f'S-{system}\n', file=f1)
-    print(f'S-{system}', file=f2)
+    # print(f'S-{system}', file=f2)
     print(f'S-{system}')
     Joker_Lottery(36, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{35:02d}':
     print(f'S-{system}\n', file=f1)
-    print(f'S-{system}', file=f2)
+    # print(f'S-{system}', file=f2)
     print(f'S-{system}')
     Joker_Lottery(37, 45)
     Joker_Lottery(19, 20)
     print("\n")
 elif system == f'{45:02d}':
     print(f'S-{system}\n', file=f1)
-    print(f'S-{system}', file=f2)
+    # print(f'S-{system}', file=f2)
     print(f'S-{system}')
     Joker_Lottery(38, 45)
     Joker_Lottery(19, 20)
@@ -272,4 +272,4 @@ else:
     print("Sorry, this system is not yet available!\n")
 
 f1.close()
-f2.close()
+# f2.close()

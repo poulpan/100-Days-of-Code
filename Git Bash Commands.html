@@ -24,7 +24,6 @@
         }
         th {
             text-align: left;
-            max-width: 50%;
         }
         ul {
             list-style-type: none;
@@ -32,109 +31,170 @@
         table {
             margin-left: auto;
             margin-right: auto ;
+            padding-bottom: 3em;
+        }
+        a {
+            color: lightcoral;
+        }
+        .left-th {
+            width: 57%;
         }
     </style>
     
     <body>
-        <h3>Git Bash Commands</h3>
+        <h3><img style="width: 50px; margin-bottom: -15px;" src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="">&ensp;Git Bash Commands</h3>
         <p>
             If you just oppened "Git Bash" App, you'll need to go where you first initialized your Git repository, i.e.: "C:\Users\user\Documents\python-folder".
-            <br />
+            <br>
             Else just right click on you working folder (i.e.: python-folder) and select "Git Bash Here".
         </p>
         <table>
             <tr>
-                <th>
+                <th class="left-th">
                     <ul >
-                        <li><em>Add your name & email to Git</em></li>
                         <li>git config --global user.name '<span>name</span>'</li>
                         <li>git config --global user.email '<span>email</span>'</li>
-                        <li><em>Adds everything (every file):</em></li>
-                        <li>git add .</li>
-                        <li><em>Add a specific file:</em></li>
-                        <li>git add <span>file.extension</span></li>
-                        <li><em>Remove a specific file:</em></li>
-                        <li>git rm --cached <span>file.extension</span></li>
-                        <li><em>Add all files of that extension:</em></li>
-                        <li>git add *.<span>extension</span></li>            
-                        <li><em>Shows you the status (obviously!):</em></li>
-                        <li>git status</li>
-                        <li><em>Opens editor (for me notepad++) to, comment changes before committing them:</em></li>
-                        <li>git commit</li>
-                        <li><em>How to comment changes before committing them, without opening the editor:</em></li>
-                        <li>git commit -m '<span>comment</span>'</li>
-                        <li><em>Create a new file:</em></li>
+                        <li><em>Add your name & email to Git.</em></li>
+                        <li>git init</li>
+                        <li><em>Initialize a git repository in the folder you are.</em></li>
                         <li>touch <span>file.extension</span></li>
+                        <li><em>Create a new file.</em></li>
+                        <li>git status</li>
+                        <li><em>Shows you the status (obviously!).</em></li>
+                        <li>git add .</li>
+                        <li><em>Adds everything (every file).</em></li>
+                        <li>git add <span>file.extension</span></li>
+                        <li><em>Add a specific file.</em></li>
+                        <li>git rm --cached <span>file.extension</span></li>
+                        <li><em>Remove a specific file from staging area.</em></li>
+                        <li>git rm --cached -r .</li>
+                        <li><em>Remove everything from staging area.</em></li>
+                        <li>git add *.<span>extension</span></li>
+                        <li><em>Add all files of that extension.</em></li>
+                        <li>git commit</li>
+                        <li><em>Opens editor (for me notepad++) to, comment changes before committing them.</em></li>
+                        <li>git commit -m '<span>comment</span>'</li>
+                        <li><em>How to comment changes before committing them, without opening the editor.</em></li>
+                        <li>git log</li>
+                        <li><em>Shows you the log of every commit you've made.</em></li>
+                        <li>git log --graph</li>
+                        <li><em>Draw a text-based graphical representation of the commit history on the left hand side of the output.</em></li>
+                        <li>git reset --hard <span>hash_of_the_commit</span></li>
+                        <li><em>return to a previous commit:<br>(Caution!! You'll lose all other commits after the one you're returning)</em></li>
+                        <li>git clean -f -d (or u can use: git clean -fdx)
+                        <li><em>remove untracked files and directories from the working tree: (check <a target="_blank" href="https://git-scm.com/docs/git-clean">git docs</a> for info)</em></li>
+                        <li>touch .gitignore</li>
                         <li><em>Create a file so that Git ignores in it's status, whatever other file or folder you put in it:
-                            <br />(ignore a file <span>file.extension</span>, ignore all files of that extension 
+                            <br>(ignore a file <span>file.extension</span>, ignore all files of that extension 
                             <span>*.extension</span>, ignore folder <span>/dir...</span>)
                         </em></li>
-                        <li>touch .gitignore</li>
-                    </ul>
-                </th>
-                <th>
-                    <ul>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                        <li>|</li>
-                    </ul>
-                </th>
-                <th>
-                    <ul>
-                        <li><em>Create a new branch so you can work and commit changes, without "saving" them to the master branch:
-                            <br />(usefull when working with a team)
-                        </em></li>
-                        <li>git branch <span>name_of_the_branch</span></li>
-                        <li><em>Switch between branches:</em></li>
-                        <li>git checkout <span>name_of_the_branch</span></li>
-                        <li><em>Create a new branch and immediately Switch to it:</em></li>
-                        <li>git checkout -b <span>name_of_the_branch</span></li>
-                        <li><em>Merge another branch to master:
-                            <br />(entering the command while we are at master branch - to be sure you can 'git checkout <span>master</span>')
-                        </em></li>
-                        <li>git merge <span>name_of_the_branch</span></li>
-                        <li><em>Merge master branch to another branch we are currently working on:
-                            <br />(entering the command while we are at our other branch that we are currently working on - 
-                            to be sure you can 'git checkout <span>name_of_the_branch</span>')
-                        </em></li>
-                        <li>git merge <span>master</span></li>
-                        <li><em>After creating a remote repository in GitHub and following the instructions for 
-                            <span>git remote and origin ...</span> and<br /><span>git push -u origin master</span>, 
-                            now every time I want to push new changes to GitHub:
-                        </em></li>
                         <li>git push</li>
-                        <li><em>If you want to pull the changes of a specific branch from a remote repository in GitHub:
-                            <br />(Caution!! 'pull' does fetch & merge changes on your local repository. It replaces your
-                            <br /> local repository with what's in the remote repository, i.e.: If you use 'git pull origin 
-                            <span>master</span>' it will replace your local master in your local repository. <br />There are also
-                            cases that you might get a merge conflict that you'll need to manually resolve. Check google for more
-                            details.)
+                        <li><em>After creating a remote repository in GitHub and following the instructions for 
+                            <span>git remote and origin ...</span> and<br><span>git push -u origin master</span>, 
+                            now every time I want to push new changes to GitHub, I use this command.
                         </em></li>
                         <li>git pull origin <span>name_of_the_branch</span></li>
+                        <li><em>If you want to pull the changes of a specific branch from a remote repository in GitHub.
+                            <br>(Caution!! 'pull' does fetch & merge changes on your local repository. It replaces your 
+                            local repository with what's in the<br>remote repository, i.e.: If you use 'git pull origin 
+                            <span>master</span>' it will replace your local master in your local repository.<br>There are also
+                            cases that you might get a merge conflict that you'll need to manually resolve: Check google for more
+                            details)
+                        </em></li>
+                    </ul>
+                </th>
+                <th>
+                    <ul>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                        <li>|</li>
+                    </ul>
+                </th>
+                <th>
+                    <ul>
+                        <li>git stash / git stash -u</li>
+                        <li><em>stashes away all the non-commited changes on your working tree. | use -u to also stash all untracked non-commited files.</em></li>
+                        <li>git stash list | git stash apply <span>index_of_the_stash</span></li>
+                        <li><em>a list of all the stashes. | brings back all the stash changes of the indexed stash (i.e. 0) to your working tree.</em></li>
+                        <li>git stash show <span>index of the stash</span> / git stash show -p <span>index of the stash</span></li>
+                        <li><em>shows the file changes of the indexed stashed. | shows you the whole content of the changed files.</em></li>
+                        <li>git stash push -m '<span>comment</span>' / git stash push -u -m '<span>comment</span>'</li>
+                        <li><em>Same as <span>git stash</span> or <span>git stash -u</span> but with a comment.</em></li>
+                        <li>git stash branch <span>name_of_the_branch</span> <span>index_of_the_stash</span></li>
+                        <li><em>Create a new branch from a stash. (brings all the stashed changes in the new branch)</em></li>
+                        <li>git stash pop / git stash pop <span>index_of_the_stash</span></li>
+                        <li><em>Brings the latest | specified indexed stash to our working tree AND removes the stash from the list.</em></li>
+                        <li>git stash clear</li>
+                        <li><em>Removes all the stashes from the list.</em></li>
+                        <li>git branch <span>name_of_the_branch</span></li>
+                        <li><em>Create a new branch so you can work and commit changes, without "saving" them to the master branch: (usefull when working with a team)</em></li>
+                        <li>git branch -a / git branch -l / git branch -a | grep <span>search_value</span></li>
+                        <li><em>List all remote and local branches. | List branch names. | List of specific branch name.</em></li>
+                        <li>git branch -m <span>new_name_of_the_branch</span></li>
+                        <li><em>Rename branch:
+                            <br>(entering the command while we are inside the branch we want to rename - 
+                            to be sure you can 'git checkout <span>name_of_the_branch</span>')
+                        </em></li>
+                        <li>git checkout <span>name_of_the_branch</span></li>
+                        <li><em>Switch between branches.</em></li>
+                        <li>git checkout -b <span>name_of_the_branch</span></li>
+                        <li><em>Create a new branch and immediately Switch to it.</em></li>
+                        <li>git merge <span>name_of_the_branch</span></li>
+                        <li><em>Merge another branch to master:
+                            <br>(entering the command while we are at master branch - to be sure you can 'git checkout <span>master</span>')
+                        </em></li>
+                        <li>git merge <span>master</span></li>
+                        <li><em>Merge master branch to another branch we are currently working on:
+                            <br>(entering the command while we are at our other branch that we are currently working on - 
+                            to be sure you can 'git checkout <span>name_of_the_branch</span>')
+                        </em></li>
+                        <li>git merge ... <span>--no-ff</span></li>
+                        <li><em>Creates a merge commit even when a fast-forward would be possible: (helps with better visualising log)</em></li>
+                        <li>git merge --abort</li>
+                        <li><em>In case of i.e. a conflict that git can't auto resolve, you can abort the merge.</em></li>
                     </ul>
                 </th>
             </tr>
