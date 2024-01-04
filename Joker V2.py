@@ -8,17 +8,17 @@ dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
 print(f"*** DATE:\t{dt_string} ***\n", file=f1)
 
 joker_systems = str("""
-No System:   5-Numbers,   1-Columns | Cost:  0.50€, Chance:   ??% 
-System 12:  15-Numbers, 118-Columns | Cost: 59.00€, Chance: 3.93%
-System 13:  13-Numbers,  54-Columns | Cost: 27.00€, Chance:  4.2%
-System 14:  12-Numbers,  38-Columns | Cost: 19.00€, Chance:  4.8%
-System 15:  11-Numbers,  22-Columns | Cost: 11.00€, Chance: 4.76%
-System 23:  10-Numbers,  51-Columns | Cost: 25.50€, Chance: 20.24%
-System 24:  10-Numbers,  14-Columns | Cost:  7.00€, Chance: 5.55%
-System 25:   9-Numbers,  30-Columns | Cost: 15.00€, Chance: 23.8%
-System 34:   9-Numbers,   9-Columns | Cost:  4.50€, Chance:  7.1%
-System 35:   8-Numbers,   6-Columns | Cost:  3.00€, Chance: 10.7%
-System 45:   7-Numbers,   5-Columns | Cost:  2.50€, Chance: 23.8%""")
+No System:   5-Numbers,   1-Columns | Cost:  1.00€, Chance:   ??% 
+System 12:  15-Numbers, 118-Columns | Cost: 118.00€, Chance: 3.93%
+System 13:  13-Numbers,  54-Columns | Cost: 54.00€, Chance:  4.2%
+System 14:  12-Numbers,  38-Columns | Cost: 38.00€, Chance:  4.8%
+System 15:  11-Numbers,  22-Columns | Cost: 22.00€, Chance: 4.76%
+System 23:  10-Numbers,  51-Columns | Cost: 51.00€, Chance: 20.24%
+System 24:  10-Numbers,  14-Columns | Cost:  14.00€, Chance: 5.55%
+System 25:   9-Numbers,  30-Columns | Cost: 30.00€, Chance: 23.8%
+System 34:   9-Numbers,   9-Columns | Cost:  9.00€, Chance:  7.1%
+System 35:   8-Numbers,   6-Columns | Cost:  6.00€, Chance: 10.7%
+System 45:   7-Numbers,   5-Columns | Cost:  5.00€, Chance: 23.8%""")
 
 while True:
     try:
